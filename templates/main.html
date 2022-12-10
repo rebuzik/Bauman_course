@@ -1,0 +1,64 @@
+<!doctype html>
+<style>
+form {
+  display: block;
+  background: #dcb6eb;
+  padding: 50px;
+  width: 100%;
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+form input {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  width: 25%;
+  height: 35px;
+  border: 1px solid #ff8c00;
+}
+
+
+</style>
+
+<head>
+    <title>Прогнозирование глубины шва</title>
+</head>
+
+<form action="{{url_for('main')}}" method="POST">
+    <fieldset>
+        <small> Ваш IW </small>
+        <input type = "text"  class="form-control" name = "iw" placeholder="47" required="required" />
+        <br>
+        <br>
+        <small> Ваш IF </small>
+        <input type="text" name = 'if' placeholder="139" required="required"/>
+        <br>
+        <br>
+        <small> Ваш VW </small>
+        <input type="text" name = 'vw' placeholder="4.5" required="required"/>
+        <br>
+        <br>
+        <small> Ваш FP </small>
+        <input type="text" name = 'fp' placeholder="80" required="required"/>
+        <br>
+        <br>
+
+        <button type = 'submit'>Predict</button>
+
+    </fieldset>
+</form>
+
+<div class="result" align="center">
+    {% if result %}
+        <br> 
+        <p style="font-size:50px">
+        Прогнозируемая глубина шва
+        </p>
+        <p style="font-size:50px"> {{result}}</p>
+    {% endif %}
+</div><!doctype html>
+<style>
