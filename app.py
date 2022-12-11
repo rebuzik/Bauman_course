@@ -9,7 +9,7 @@ app = flask.Flask(__name__, template_folder='templates')
 
 loaded_model = pickle.load(open("Random_Forest_for_Depth.pkl", 'rb'))
 loaded_model_for_Width = pickle.load(open("Random_Forest_for_Width.pkl", 'rb'))
-scaler_X = pickle.load(open("scaler_X2.pkl", 'rb'))
+scaler_X = pickle.load(open("scaler_X3.pkl", 'rb'))
 
 @app.route('/', methods = ['POST', 'GET'])
 
