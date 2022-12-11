@@ -34,7 +34,7 @@ def main():
         y_pred = loaded_model.predict(X_list_for_predict_scaled)
 
 
-        return render_template('main.html', result = y_pred)
+        return render_template('main.html', result = y_pred, result2 = y_pred)
 
 if __name__ == '__main__':
     app.run(debug = True)
